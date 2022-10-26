@@ -225,6 +225,33 @@ namespace {namespaceName}
 				text);
 		}
 
+		public void CreateServiceDefinition(
+			string filePath,
+			string namespaceName,
+			string serviceDefinitionInterfaceTypeName)
+		{
+			var text =
+$@"
+using System;
+using System.Threading.Tasks;
+
+using R5T.T0064;
+
+
+namespace {namespaceName}
+{{
+	[ServiceDefinitionMarker]
+    public interface {serviceDefinitionInterfaceTypeName} : IServiceDefinition
+    {{
+        
+    }}
+}}
+";
+			Instances.TextFileGenerator.WriteText(
+				filePath,
+				text);
+		}
+
 		public void CreateServicesConfigurer(
 			string filePath,
 			string namespaceName)
