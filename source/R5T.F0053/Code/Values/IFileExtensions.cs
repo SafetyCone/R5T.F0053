@@ -16,5 +16,6 @@ namespace R5T.F0053
 
 
         public string CSharpCodeFile => this.cs;
+		public string Resx => "resx";
 	}
 }

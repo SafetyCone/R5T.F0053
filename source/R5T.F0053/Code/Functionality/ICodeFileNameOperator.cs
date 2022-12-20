@@ -15,5 +15,26 @@ namespace R5T.F0053
             var output = $"{typeName}.{FileExtensions.Instance.cs}";
             return output;
         }
+
+        public string GetWindowsFormClassFileName(
+            string formName)
+        {
+            var output = this.GetCSharpCodeFileName_ForTypeName(formName);
+            return output;
+        }
+
+        public string GetWindowsFormDesignerFileName(
+            string formName)
+        {
+            var output = $"{formName}.{FileNameAffixes.Instance.Designer}.{FileExtensions.Instance.cs}";
+            return output;
+        }
+
+        public string GetWindowsFormResxFileName(
+            string formName)
+        {
+            var output = $"{formName}.{FileExtensions.Instance.Resx}";
+            return output;
+        }
     }
 }
