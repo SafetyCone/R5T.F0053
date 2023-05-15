@@ -8,10 +8,13 @@ namespace R5T.F0053
 	[FunctionalityMarker]
 	public partial interface ICodeFileGenerator : IFunctionalityMarker
 	{
+		/// <summary>
+		/// Creates a project documentation file, containing the documentation class definition.
+		/// </summary>
 		public void CreateDocumentationFile(
 			 string filePath,
 			 string namespaceName,
-			 string description)
+			 string projectDescription)
 		{
 			var text =
 $@"
@@ -21,7 +24,7 @@ using System;
 namespace {namespaceName}
 {{
 	/// <summary>
-	/// {description}
+	/// {projectDescription}
 	/// </summary>
 	public static class Documentation
 	{{
