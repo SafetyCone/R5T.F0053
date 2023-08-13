@@ -8,6 +8,15 @@ namespace R5T.F0053
 	[FunctionalityMarker]
 	public partial interface ICodeFileNameOperator : IFunctionalityMarker
 	{
+        /// <summary>
+        /// Whatever the input file name, append the CSharp code file extension (and file extension separator).
+        /// </summary>
+        public string Append_CSharpFileExtension(string fileName)
+        {
+            var output = $"{fileName}.{Instances.FileExtensions.CSharpCodeFile}";
+            return output;
+        }
+
         public string GetCSharpCodeFileName_ForTypeName(
             string typeName)
         {
