@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -16,5 +16,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\R5T.F0054\source\R5T.F0054\R5T.F0054.csproj" />
+    <ProjectReference Include="..\..\..\R5T.Z0072\source\R5T.Z0072.Z000\R5T.Z0072.Z000.csproj" />
   </ItemGroup>
 </Project>
